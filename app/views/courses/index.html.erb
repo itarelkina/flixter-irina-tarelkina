@@ -9,7 +9,7 @@
     <h2 class="text-center">
       <%= link_to course.title, course_path(course) %>
     </h2>
-
+    <br />
     <% if course.image.url != nil %>
       <%= image_tag course.image.url, class: 'img-fluid' %>
     <% end %>
@@ -17,9 +17,12 @@
     <br />
     <div class="row">
       <div class="col-sm-8 col-12">
+      <br />
         <%= course.description %>
       </div>
+      <br />
       <div class="col-sm-4 col-12 text-center">
+      <br />
         <%= link_to 'More Details...', course_path(course), class: 'btn btn-primary btn-large' %>
       </div>
     </div>

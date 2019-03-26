@@ -3,6 +3,8 @@
 <div class="booyah-box col-10 offset-1">
   <h1><% if current_user && current_user == @course.user %>
         <%= image_tag @course.image.url, class: 'img-fluid' %>
+        <br />
+        <br />
         <%= @course.title %> <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
         <br />
       <% else %>
@@ -11,7 +13,6 @@
       <% end %>
       <br />
       <br />
-      <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
   </h1>
 
   <br />
@@ -24,12 +25,12 @@
     <br />
     <br />
 
-    <% if current_user && current_user.enrolled_in?(@course) %>
-      <h3 class="badge badge-info">You Are Enrolled!</h3>
-    <% else %>
-      <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
-    <% end %>
-  </div>
+      <% if current_user && current_user.enrolled_in?(@course) %>
+        <h3 class="badge badge-info">You Are Enrolled!</h3>
+      <% else %>
+        <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
+      <% end %>
+    </div>
 
   <div class="col-sm-10 col-12">
       <%= @course.description %>
