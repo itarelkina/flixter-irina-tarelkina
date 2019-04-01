@@ -11,6 +11,16 @@ html {
   #flex-content-container {
     flex: 1;
   }
+
+  .social-button {
+    margin: 4px;
+  }
+
+  .social a:hover {
+    text-decoration: none;
+  }
+  
+
   #footer {
     position: relative;
     width: 100%;
@@ -20,4 +30,5 @@ html {
     font-family: "Helvetica Neue", Helvetica;
     padding: 10px 0px;
     margin-top: 30px;
-  }
+    font-weight: 100;
+}
